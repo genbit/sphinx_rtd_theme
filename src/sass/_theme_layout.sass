@@ -223,7 +223,7 @@ html
     width: 95%
     padding: 6px
     background-color: transparent
-    margin-bottom: 30px
+    margin-bottom: 24px
 
   input[type=text]
     display: block
@@ -543,9 +543,29 @@ footer
       color: #919191
       height: 70px
       line-height: 70px
-      padding: 0 26px
+      padding: 0 26px 
 
-    .wy-main-nav-checkbox:checked + .wy-main-nav-menu
+      &::before
+        content: " "
+        display: none
+
+    .wy-main-nav-checkbox:checked + .wy-main-nav-toggle
+      width: 90px
+      font-size: 0
+      color: transparent
+
+      &::before
+        display: block
+        width: 13px
+        height: 13px
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxMyAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuNDg5MTQ1IDAuNDg5NTcyQy0wLjA5NjY0MzUgMS4wNzUzNiAtMC4wOTY2NDA4IDIuMDI1MTEgMC40ODkxNDUgMi42MTA4OUw0LjM3ODIzIDYuNDk5OThMMC40ODkxNDUgMTAuMzg5MUMtMC4wOTY2NDM1IDEwLjk3NDkgLTAuMDk2NjQwOCAxMS45MjQ2IDAuNDg5MTQ1IDEyLjUxMDRDMS4wNzQ5MyAxMy4wOTYyIDIuMDI0NjggMTMuMDk2MiAyLjYxMDQ3IDEyLjUxMDRMNi40OTk1NSA4LjYyMTNMMTAuMzg4NiAxMi41MTA0QzEwLjk3NDQgMTMuMDk2MiAxMS45MjQyIDEzLjA5NjIgMTIuNTEgMTIuNTEwNEMxMy4wOTU3IDExLjkyNDYgMTMuMDk1NyAxMC45NzQ5IDEyLjUxIDEwLjM4OTFMOC42MjA4NyA2LjQ5OTk4TDEyLjUxIDIuNjEwODlDMTMuMDk1NyAyLjAyNTEgMTMuMDk1NyAxLjA3NTM2IDEyLjUxIDAuNDg5NTcyQzExLjkyNDIgLTAuMDk2MjEzNSAxMC45NzQ0IC0wLjA5NjIxNjMgMTAuMzg4NiAwLjQ4OTU3Mkw2LjQ5OTU1IDQuMzc4NjZMMi42MTA0NyAwLjQ4OTU3MkMyLjAyNDY4IC0wLjA5NjIxMzUgMS4wNzQ5MyAtMC4wOTYyMTYzIDAuNDg5MTQ1IDAuNDg5NTcyWiIgZmlsbD0iIzkwOTA5MCIvPgo8L3N2Zz4KCg==")
+        background-size: cover
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate3d(-50%, -50%, 0)
+
+    .wy-main-nav-checkbox:checked + label + .wy-main-nav-menu
       display: block
 
     li + li 
